@@ -1,0 +1,67 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #f9f8f6;
+}
+
+p {
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 95%;
+}
+
+header .container h1 {
+  text-align: center;
+  margin: 5px 0;
+}
+header .container .navi {
+  text-align: center;
+  margin-bottom: 10px;
+}
+header .container .navi .btn {
+  padding-right: 10px;
+}
+header .container .navi .menu_btn {
+  padding-right: 0;
+}
+header .pc_navi {
+  display: none;
+}
+header .sp_navi_li {
+  width: 150px;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  border: 1px solid #eee;
+  background: white;
+  margin: 0;
+  padding: 0;
+  display: none;
+  z-index: 100;
+}
+header .sp_navi_li a {
+  display: block;
+  padding: 10px 8px;
+  border-bottom: 1px solid #eee;
+}
+
+main {
+  background-color: pink;
+}
+
+footer {
+  background-color: #9d1a2d;
+}
+
+/*# sourceMappingURL=style.css.map */
