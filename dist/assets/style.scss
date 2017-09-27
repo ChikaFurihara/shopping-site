@@ -1,7 +1,15 @@
 @charset "utf-8";
 @import "compass";
+
+$ja_font : "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Verdana, "ＭＳ Ｐゴシック", MS PGothic, sans-serif;
+$gray1 : #e2ddd4;
+$gray2 : #b0b0b0;
+$keyColor : #887f69;
+$red : #9d1a2d;
+
 html {
   font-size: 62.5%;
+  color: #333;
 }
 
 @mixin fontsize($size: 24, $base: 10) {
@@ -15,6 +23,7 @@ body {
 
 p {
   @include fontsize(16);
+  margin-bottom: 10px;
 }
 
 li{
@@ -23,23 +32,20 @@ li{
   padding: 0;
 }
 
+h1,h2 {
+  text-align: center;
+  margin: 5px 0;
+}
+  
 .container {
   width: 95%;
+  padding: 0;
 }
 
-$ja_font : "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Verdana, "ＭＳ Ｐゴシック", sans-serif;
-$gray1 : #e2ddd4;
-$gray2 : #b0b0b0;
-$keyColor : #887f69;
-$red : #9d1a2d;
 
 header{
   // @media (max-width: 640px){
     .container {
-      h1 {
-      text-align: center;
-      margin: 5px 0;
-      }
       .navi {
         text-align: center;
         margin-bottom: 10px;
@@ -76,10 +82,96 @@ header{
 }
 
 
-
-
 main {
-  background-color: pink;
+  .title {
+    margin-top: -5px;
+    margin-bottom: 5px;
+  }
+  #new_items {
+    .title {
+      width: 120px;
+    }
+    ul {
+      li {
+        width: 48%;
+        margin: 1%;
+        padding: 2%;
+        display: inline-block;
+        float: left;
+        background-color: #fff;
+        box-sizing: border-box;
+        .price {
+          letter-spacing: .5px;
+        }
+      }
+    }
+  }
+  #popular_items {
+    @extend #new_items;
+      .title {
+        width: 190px;
+      }
+  }
+  #shopping_guide {
+    color: $keyColor;
+    h3 {
+      @include fontsize(22);
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    div {
+      background-color: #fff;
+      padding-top: 20px;
+      padding-left: 5%;
+      padding-bottom: 10px;
+      padding-right: 5%;
+      margin: 1%;
+      .delivery_img {
+        width: 250px;
+      }
+      .payment_img {
+        width: 500px;
+      }
+    }
+    .title {
+      width: 220px;
+    }
+    p {
+      margin-top: 15px;
+      margin-bottom: 0;
+      font-weight: 600;
+    }
+    span{
+      display: inline-block;
+      color: #333;
+    }
+  }
+  #side_bar {
+    h4 {
+      background-color: $keyColor;
+      padding-top: 16px;
+      padding-bottom: 10px;
+      padding-left: 5%;
+      margin-top: 20px;
+      margin-bottom: 0;
+      img {
+        padding-bottom: 7px;
+      }
+    }
+    .right {
+      float: right;
+      padding: 10px 4%;
+    }
+  }
+  #categories {
+    P {
+      background-color: #fff;
+      line-height: 2;
+      margin-top: 0;
+      margin-bottom: 2px;
+      padding: 10px 0 10px 5%;
+    }
+  }
 }
 footer {
   background-color: $red;

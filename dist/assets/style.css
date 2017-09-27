@@ -1,5 +1,6 @@
 html {
   font-size: 62.5%;
+  color: #333;
 }
 
 body {
@@ -9,6 +10,7 @@ body {
 p {
   font-size: 16px;
   font-size: 1.6rem;
+  margin-bottom: 10px;
 }
 
 li {
@@ -17,14 +19,16 @@ li {
   padding: 0;
 }
 
-.container {
-  width: 95%;
-}
-
-header .container h1 {
+h1, h2 {
   text-align: center;
   margin: 5px 0;
 }
+
+.container {
+  width: 95%;
+  padding: 0;
+}
+
 header .container .navi {
   text-align: center;
   margin-bottom: 10px;
@@ -56,8 +60,84 @@ header .sp_navi_li a {
   border-bottom: 1px solid #eee;
 }
 
-main {
-  background-color: pink;
+main .title {
+  margin-top: -5px;
+  margin-bottom: 5px;
+}
+main #new_items .title, main #popular_items .title {
+  width: 120px;
+}
+main #new_items ul li, main #popular_items ul li {
+  width: 48%;
+  margin: 1%;
+  padding: 2%;
+  display: inline-block;
+  float: left;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+main #new_items ul li .price, main #popular_items ul li .price {
+  letter-spacing: .5px;
+}
+main #popular_items .title {
+  width: 190px;
+}
+main #shopping_guide {
+  color: #887f69;
+}
+main #shopping_guide h3 {
+  font-size: 22px;
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+main #shopping_guide div {
+  background-color: #fff;
+  padding-top: 20px;
+  padding-left: 5%;
+  padding-bottom: 10px;
+  padding-right: 5%;
+  margin: 1%;
+}
+main #shopping_guide div .delivery_img {
+  width: 250px;
+}
+main #shopping_guide div .payment_img {
+  width: 500px;
+}
+main #shopping_guide .title {
+  width: 220px;
+}
+main #shopping_guide p {
+  margin-top: 15px;
+  margin-bottom: 0;
+  font-weight: 600;
+}
+main #shopping_guide span {
+  display: inline-block;
+  color: #333;
+}
+main #side_bar h4 {
+  background-color: #887f69;
+  padding-top: 16px;
+  padding-bottom: 10px;
+  padding-left: 5%;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+main #side_bar h4 img {
+  padding-bottom: 7px;
+}
+main #side_bar .right {
+  float: right;
+  padding: 10px 4%;
+}
+main #categories P {
+  background-color: #fff;
+  line-height: 2;
+  margin-top: 0;
+  margin-bottom: 2px;
+  padding: 10px 0 10px 5%;
 }
 
 footer {
