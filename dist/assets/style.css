@@ -125,10 +125,30 @@ main #shopping_guide span {
 main #side_bar {
   margin: 1%;
 }
+main #side_bar .right {
+  float: right;
+  padding: 10px 4%;
+}
 main #side_bar #search {
   background-color: #fff;
   margin-top: 20px;
   height: 80px;
+}
+main #side_bar input {
+  width: 85%;
+  height: 40px;
+  margin: 20px 7.5%;
+  font-style: italic;
+  font-size: 14px;
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 0;
+  background: url("../images/top/search_icon.png") no-repeat 97% 50%;
+  box-sizing: border-box;
+}
+main #side_bar .input_bg {
+  background-color: rgba(221, 221, 221, 0.5);
+  padding: 0 15px;
 }
 main #side_bar h4 {
   background-color: #887f69;
@@ -140,10 +160,6 @@ main #side_bar h4 {
 }
 main #side_bar h4 img {
   padding-bottom: 7px;
-}
-main #side_bar .right {
-  float: right;
-  padding: 10px 4%;
 }
 main #categories P {
   background-color: #fff;
@@ -195,6 +211,7 @@ footer .container small {
   color: #ccc;
   display: inherit;
   text-align: center;
+  letter-spacing: .5px;
 }
 
 /*# sourceMappingURL=style.css.map */
