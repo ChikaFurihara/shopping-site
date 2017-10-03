@@ -61,7 +61,7 @@ header .sp_navi_li {
 }
 header .sp_navi_li a {
   display: block;
-  padding: 10px 8px;
+  padding: 5px 8px;
   border-bottom: 1px solid #eee;
 }
 
