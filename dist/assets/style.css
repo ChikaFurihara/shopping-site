@@ -6,6 +6,12 @@ html {
 body {
   background-color: #f9f8f6;
 }
+@media (min-width: 640px) {
+  body {
+    font-size: 12px;
+    font-size: 1.2rem;
+  }
+}
 
 p {
   font-size: 16px;
@@ -39,7 +45,11 @@ header .container .navi {
   margin-bottom: 10px;
 }
 header .container .navi .btn {
-  padding-right: 10px;
+  margin-right: 10px;
+  padding-top: 15px;
+}
+header .container .navi #menu_js {
+  margin-right: 0;
 }
 header .container .navi .menu_btn {
   padding-right: 0;
@@ -64,17 +74,57 @@ header .sp_navi_li a {
   padding: 5px 8px;
   border-bottom: 1px solid #eee;
 }
+@media (min-width: 640px) {
+  header h1 {
+    margin-top: -10px;
+  }
+  header #logo {
+    float: left;
+  }
+  header .sp_navi {
+    display: none;
+  }
+  header .pc_navi {
+    display: block;
+    float: right;
+    margin-top: 30px;
+  }
+  header .pc_navi .pc_navi_li {
+    float: right;
+  }
+  header .pc_navi .pc_navi_li li {
+    float: left;
+  }
+  header .pc_navi .pc_navi_li li img {
+    width: 70%;
+  }
+  header .pc_navi .pc_navi_li .cart {
+    margin: 0 -15px;
+  }
+}
 
-main .title {
+main .sp_title {
   margin-top: -5px;
   margin-bottom: 5px;
 }
-main #new_items .title, main #popular_items .title {
+main .pc_title {
+  display: none;
+}
+@media (min-width: 640px) {
+  main .sp_title {
+    display: none;
+  }
+  main .pc_title {
+    display: block;
+    margin: 20px 0;
+  }
+}
+main #new_items .sp_title, main #popular_items .sp_title {
   width: 120px;
 }
 main #new_items ul li, main #popular_items ul li {
-  width: 48%;
-  margin: 1%;
+  width: 49%;
+  margin: 0.5%;
   padding: 2%;
   display: inline-block;
   float: left;
@@ -84,7 +134,16 @@ main #new_items ul li, main #popular_items ul li {
 main #new_items ul li .price, main #popular_items ul li .price {
   letter-spacing: .5px;
 }
-main #popular_items .title {
+@media (min-width: 640px) {
+  main #new_items ul, main #popular_items ul {
+    width: 102%;
+  }
+  main #new_items ul li, main #popular_items ul li {
+    width: 32%;
+    margin: 0 1% 1% 0;
+  }
+}
+main #popular_items .sp_title {
   width: 190px;
 }
 main #shopping_guide {
@@ -98,11 +157,20 @@ main #shopping_guide h3 {
 }
 main #shopping_guide div {
   background-color: #fff;
+  margin: 1% 1% 0;
   padding-top: 20px;
   padding-left: 5%;
   padding-bottom: 10px;
   padding-right: 5%;
-  margin: 1% 1% 0;
+}
+@media (min-width: 640px) {
+  main #shopping_guide div {
+    height: 290px;
+    width: 49.5%;
+    float: left;
+    box-sizing: border-box;
+    margin: 0;
+  }
 }
 main #shopping_guide div .delivery_img {
   width: 250px;
@@ -110,7 +178,12 @@ main #shopping_guide div .delivery_img {
 main #shopping_guide div .payment_img {
   width: 500px;
 }
-main #shopping_guide .title {
+@media (min-width: 640px) {
+  main #shopping_guide .delivery {
+    margin: 0 1% 0 0;
+  }
+}
+main #shopping_guide .sp_title {
   width: 220px;
 }
 main #shopping_guide p {
@@ -125,41 +198,92 @@ main #shopping_guide span {
 main #side_bar {
   margin: 1%;
 }
-main #side_bar .right {
+main #side_bar .next_img {
   float: right;
-  padding: 10px 4%;
+  width: 29px;
+  margin-right: 2%;
+  padding: 10px;
+}
+@media (min-width: 640px) {
+  main #side_bar .next_img {
+    width: 26px;
+  }
+}
+main #side_bar .down_img {
+  float: right;
+  width: 35px;
+  margin-right: 2%;
+  padding: 10px;
+}
+@media (min-width: 640px) {
+  main #side_bar .down_img {
+    width: 31px;
+  }
 }
 main #side_bar #search {
   background-color: #fff;
   margin-top: 20px;
-  height: 80px;
+  padding: 20px;
 }
-main #side_bar input {
-  width: 85%;
+main #side_bar #search .seach_logo {
+  display: none;
+}
+@media (min-width: 640px) {
+  main #side_bar #search {
+    margin-top: 0;
+  }
+  main #side_bar #search .seach_logo {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+main #side_bar #search input {
+  width: 100%;
   height: 40px;
-  margin: 20px 7.5%;
+  margin-bottom: 0;
   font-style: italic;
-  font-size: 14px;
-  font-size: 1.4rem;
+  font-size: 10px;
+  font-size: 1rem;
   border: none;
   border-radius: 0;
   background: url("../images/top/search_icon.png") no-repeat 97% 50%;
   box-sizing: border-box;
 }
-main #side_bar .input_bg {
+main #side_bar #search .input_bg {
   background-color: rgba(221, 221, 221, 0.5);
-  padding: 0 15px;
+  padding: 0 5px;
 }
 main #side_bar h4 {
   background-color: #887f69;
+  margin-top: 20px;
+  margin-bottom: 0;
   padding-top: 16px;
   padding-bottom: 10px;
   padding-left: 5%;
-  margin-top: 20px;
-  margin-bottom: 0;
+}
+@media (min-width: 640px) {
+  main #side_bar h4 {
+    margin-top: 10px;
+    padding-top: 6px;
+    padding-bottom: 0;
+  }
 }
 main #side_bar h4 img {
   padding-bottom: 7px;
+}
+@media (max-width: 639px) {
+  main #side_bar .links_title {
+    width: 90px;
+  }
+  main #side_bar .categories_title {
+    width: 100px;
+  }
+  main #side_bar .about_title {
+    width: 60px;
+  }
+  main #side_bar .shop_info_title {
+    width: 90px;
+  }
 }
 main #categories P {
   background-color: #fff;
