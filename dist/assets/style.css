@@ -22,6 +22,7 @@ p {
   p {
     font-size: 12px;
     font-size: 1.2rem;
+    letter-spacing: .5px;
   }
 }
 
@@ -108,12 +109,12 @@ header .sp_navi_li a {
   }
   header .pc_navi .pc_navi_li li a {
     padding: 5px 5px;
-    border-radius: 8px;
   }
   header .pc_navi .pc_navi_li li .pc_navi_btn {
     padding: 15px 5px 2px;
   }
   header .pc_navi .pc_navi_li li a:hover {
+    border-radius: 8px;
     background-color: rgba(172, 12, 12, 0.1);
     transition: all .8s;
   }
@@ -228,8 +229,7 @@ main #side_bar {
 main #side_bar .next_img {
   float: right;
   width: 29px;
-  margin-right: 2%;
-  padding: 10px;
+  padding: 7px 10px 0;
 }
 @media (min-width: 640px) {
   main #side_bar .next_img {
@@ -239,7 +239,6 @@ main #side_bar .next_img {
 main #side_bar .down_img {
   float: right;
   width: 35px;
-  margin-right: 2%;
   padding: 10px;
 }
 @media (min-width: 640px) {
@@ -282,11 +281,11 @@ main #side_bar #search .input_bg {
 }
 main #side_bar h4 {
   background-color: #887f69;
-  margin-top: 20px;
-  margin-bottom: 0;
-  padding-top: 16px;
-  padding-bottom: 10px;
-  padding-left: 5%;
+  height: 50px;
+  line-height: 30px;
+  box-sizing: border-box;
+  margin: 20px 0 0;
+  padding: 10px 2% 10px 5%;
 }
 @media (min-width: 640px) {
   main #side_bar h4 {
@@ -295,29 +294,34 @@ main #side_bar h4 {
     padding-bottom: 0;
   }
 }
-main #side_bar h4 img {
-  padding-bottom: 7px;
-}
 @media (max-width: 639px) {
   main #side_bar .links_title {
     width: 90px;
+    padding-bottom: 2px;
   }
   main #side_bar .categories_title {
     width: 100px;
+    padding-bottom: 3px;
   }
   main #side_bar .about_title {
-    width: 60px;
+    width: 65px;
+    padding-bottom: 3px;
   }
   main #side_bar .shop_info_title {
-    width: 90px;
+    width: 100px;
+    padding-bottom: 3px;
   }
 }
 main #categories P {
+  height: 50px;
+  box-sizing: border-box;
+  line-height: 30px;
   background-color: #fff;
-  line-height: 2;
-  margin-top: 0;
   margin-bottom: 2px;
-  padding: 10px 0 10px 5%;
+  padding: 10px;
+  padding-left: 5%;
+  font-size: 12px;
+  font-size: 1.2rem;
 }
 main aside .store_box {
   box-sizing: border-box;
@@ -344,6 +348,15 @@ main aside .store_box .store_right {
   main aside .store_box .store_right {
     width: 100%;
     letter-spacing: 1px;
+  }
+  main aside .store_box .store_right a {
+    display: block;
+  }
+  main aside .store_box .store_right a:hover {
+    background-color: #887f69;
+    border-radius: 20px;
+    padding: 3px 0;
+    transition: all .8s;
   }
 }
 main aside .store_box .store_right .more_btn {
@@ -378,10 +391,25 @@ footer .container {
 footer .container .footer_navi {
   font-size: 14px;
   font-size: 1.4rem;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
   text-align: center;
   margin-bottom: 0;
   padding: 20px 20px 10px;
+}
+@media (min-width: 640px) {
+  footer .container .footer_navi {
+    font-size: 10px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
+  footer .container .footer_navi a {
+    padding: 5px 5px;
+  }
+  footer .container .footer_navi a:hover {
+    border-radius: 8px;
+    background-color: rgba(172, 12, 12, 0.1);
+    transition: all .8s;
+  }
 }
 footer .container small {
   color: #ccc;

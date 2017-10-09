@@ -16,6 +16,11 @@ html {
   font-size: $size + px;
   font-size: ($size / $base) * 1rem;
 }
+@mixin hover {
+  border-radius: 8px;
+  background-color: rgba(172, 12, 12, 0.1);
+  transition: all .8s;
+}
 
 body {
   background-color: #f9f8f6;
@@ -28,6 +33,7 @@ p {
   @include fontsize(16);
   @media (min-width: 640px){
     @include fontsize(12);
+    letter-spacing: .5px;
   }
   margin-bottom: 10px;
 }
@@ -116,14 +122,12 @@ header{
           display: inline-block;
           a {
             padding: 5px 5px;
-            border-radius: 8px;
           }
           .pc_navi_btn {
             padding: 15px 5px 2px;
           }
           a:hover {
-            background-color: rgba(172, 12, 12, 0.1);
-            transition: all .8s;
+            @include hover;
           }
           img {
             width: 75%;
@@ -244,8 +248,7 @@ main {
       @media (min-width: 640px){
         width: 26px;
       }
-      margin-right: 2%;
-      padding: 10px;
+      padding: 7px 10px 0;
     }
     .down_img {
       float: right;
@@ -253,7 +256,6 @@ main {
       @media (min-width: 640px){
         width: 31px;
       }
-      margin-right: 2%;
       padding: 10px;
     }
     #search{
@@ -288,42 +290,46 @@ main {
     }
     h4 {
       background-color: $keyColor;
-      margin-top: 20px;
-      margin-bottom: 0;
-      padding-top: 16px;
-      padding-bottom: 10px;
-      padding-left: 5%;
+      height: 50px;
+      line-height: 30px;
+      box-sizing: border-box;
+      margin: 20px 0 0;
+      padding: 10px 2% 10px 5%;
       @media (min-width: 640px){
         margin-top: 10px;
         padding-top: 6px;
         padding-bottom: 0;
       }
-      img {
-        padding-bottom: 7px;
-      }
     }
     @media (max-width: 639px){
       .links_title {
         width: 90px;
+        padding-bottom: 2px;
       }
       .categories_title {
         width: 100px;
+        padding-bottom: 3px;
       }
       .about_title {
-        width: 60px;
+        width: 65px;
+        padding-bottom: 3px;
       }
       .shop_info_title {
-        width: 90px;
+        width: 100px;
+        padding-bottom: 3px;
       }
     }
   }
   #categories {
     P {
+      height: 50px;
+      box-sizing: border-box;
+      line-height: 30px;
       background-color: #fff;
-      line-height: 2;
-      margin-top: 0;
       margin-bottom: 2px;
-      padding: 10px 0 10px 5%;
+      padding: 10px;
+      padding-left: 5%;
+      @include fontsize(12);
     }
   }
   aside {
@@ -347,6 +353,15 @@ main {
         @media (min-width: 640px) {
           width: 100%;
           letter-spacing: 1px;
+          a {
+            display: block;
+          }
+          a:hover {
+            background-color: $keyColor;
+            border-radius: 20px;
+            padding: 3px 0;
+            transition: all .8s;
+          }
         }
         .more_btn {
           width: 130px;
@@ -377,10 +392,20 @@ footer {
     border-top: 1px solid rgba(136, 127, 105, .6);
     .footer_navi {
       @include fontsize(14);
-      letter-spacing: 1px;
+      letter-spacing: 1.5px;
       text-align: center;
       margin-bottom: 0;
       padding: 20px 20px 10px;
+      @media (min-width: 640px){
+        @include fontsize(10);
+        letter-spacing: 1px;
+        a {
+          padding: 5px 5px;
+        }
+        a:hover {
+          @include hover;
+        }
+      }
     }
     small {
       color: #ccc;
