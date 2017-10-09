@@ -18,6 +18,12 @@ p {
   font-size: 1.6rem;
   margin-bottom: 10px;
 }
+@media (min-width: 640px) {
+  p {
+    font-size: 12px;
+    font-size: 1.2rem;
+  }
+}
 
 li {
   list-style: none;
@@ -76,7 +82,12 @@ header .sp_navi_li a {
 }
 @media (min-width: 640px) {
   header h1 {
-    margin-top: -10px;
+    height: 50px;
+    margin-top: 30px;
+    margin-left: 5px;
+  }
+  header h1 img {
+    width: 150px;
   }
   header #logo {
     float: left;
@@ -87,16 +98,27 @@ header .sp_navi_li a {
   header .pc_navi {
     display: block;
     float: right;
-    margin-top: 30px;
+    margin-bottom: 20px;
   }
   header .pc_navi .pc_navi_li {
     float: right;
   }
   header .pc_navi .pc_navi_li li {
-    float: left;
+    display: inline-block;
+  }
+  header .pc_navi .pc_navi_li li a {
+    padding: 5px 5px;
+    border-radius: 8px;
+  }
+  header .pc_navi .pc_navi_li li .pc_navi_btn {
+    padding: 15px 5px 2px;
+  }
+  header .pc_navi .pc_navi_li li a:hover {
+    background-color: rgba(172, 12, 12, 0.1);
+    transition: all .8s;
   }
   header .pc_navi .pc_navi_li li img {
-    width: 70%;
+    width: 75%;
   }
   header .pc_navi .pc_navi_li .cart {
     margin: 0 -15px;
@@ -136,11 +158,11 @@ main #new_items ul li .price, main #popular_items ul li .price {
 }
 @media (min-width: 640px) {
   main #new_items ul, main #popular_items ul {
-    width: 102%;
+    width: 100.5%;
   }
   main #new_items ul li, main #popular_items ul li {
-    width: 32%;
-    margin: 0 1% 1% 0;
+    width: 33%;
+    margin: 0 .3% .3% 0;
   }
 }
 main #popular_items .sp_title {
@@ -165,7 +187,7 @@ main #shopping_guide div {
 }
 @media (min-width: 640px) {
   main #shopping_guide div {
-    height: 290px;
+    height: 270px;
     width: 49.5%;
     float: left;
     box-sizing: border-box;
@@ -174,6 +196,11 @@ main #shopping_guide div {
 }
 main #shopping_guide div .delivery_img {
   width: 250px;
+}
+@media (min-width: 640px) {
+  main #shopping_guide div .delivery_img {
+    width: auto;
+  }
 }
 main #shopping_guide div .payment_img {
   width: 500px;
@@ -302,19 +329,44 @@ main aside .store_box .store_img {
   width: 50%;
   padding: 2%;
 }
+@media (min-width: 640px) {
+  main aside .store_box .store_img {
+    width: 100%;
+  }
+}
 main aside .store_box .store_right {
   float: right;
   width: 50%;
   padding-left: 2%;
   box-sizing: border-box;
 }
+@media (min-width: 640px) {
+  main aside .store_box .store_right {
+    width: 100%;
+    letter-spacing: 1px;
+  }
+}
 main aside .store_box .store_right .more_btn {
   width: 130px;
+}
+@media (min-width: 640px) {
+  main aside .store_box .store_right .more_btn {
+    width: auto;
+    display: block;
+    margin: 0 auto;
+  }
 }
 main .pagetop {
   width: 100px;
   display: block;
   margin: 30px auto;
+}
+@media (min-width: 640px) {
+  main .pagetop {
+    width: auto;
+    margin: 50px 0 20px;
+    float: right;
+  }
 }
 
 footer {
