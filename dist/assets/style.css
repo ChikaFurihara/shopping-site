@@ -51,8 +51,19 @@ h1, h2 {
 header .container h1 {
   margin-top: 10px;
 }
-header .container h1 #logo img {
+header .container h1 img {
   width: 110px;
+}
+@media (min-width: 640px) {
+  header .container h1 {
+    height: 50px;
+    margin-top: 30px;
+    margin-left: 5px;
+    margin-bottom: 0;
+  }
+  header .container h1 img {
+    width: 150px;
+  }
 }
 header .container .navi {
   text-align: center;
@@ -93,6 +104,7 @@ header .sp_navi_li a {
     height: 50px;
     margin-top: 30px;
     margin-left: 5px;
+    margin-bottom: 0;
   }
   header h1 img {
     width: 150px;
@@ -163,8 +175,10 @@ main #new_items ul li, main #popular_items ul li, main #item_area ul li, main #r
 main #new_items ul li p, main #popular_items ul li p, main #item_area ul li p, main #recent_pro ul li p {
   line-height: 20px;
 }
-main #new_items ul li:nth-child(odd), main #popular_items ul li:nth-child(odd), main #item_area ul li:nth-child(odd), main #recent_pro ul li:nth-child(odd) {
-  margin-right: 1%;
+@media (max-width: 639px) {
+  main #new_items ul li:nth-child(odd), main #popular_items ul li:nth-child(odd), main #item_area ul li:nth-child(odd), main #recent_pro ul li:nth-child(odd) {
+    margin-right: 1%;
+  }
 }
 main #new_items ul .price, main #popular_items ul .price, main #item_area ul .price, main #recent_pro ul .price {
   letter-spacing: .5px;
@@ -172,8 +186,11 @@ main #new_items ul .price, main #popular_items ul .price, main #item_area ul .pr
 }
 @media (min-width: 640px) {
   main #new_items ul li, main #popular_items ul li, main #item_area ul li, main #recent_pro ul li {
-    width: 33%;
-    margin: 0 .3% .3% 0;
+    width: 32.9%;
+    margin: 0 .6% .6% 0;
+  }
+  main #new_items ul li:nth-child(3n), main #popular_items ul li:nth-child(3n), main #item_area ul li:nth-child(3n), main #recent_pro ul li:nth-child(3n) {
+    margin-right: 0;
   }
 }
 main #popular_items .sp_title {
@@ -191,31 +208,13 @@ main #shopping_guide h3 {
 main #shopping_guide div {
   background-color: #fff;
   padding: 25px 6% 10px;
-}
-@media (min-width: 640px) {
-  main #shopping_guide div {
-    height: 270px;
-    width: 49.5%;
-    float: left;
-    box-sizing: border-box;
-    margin: 0;
-  }
+  margin-top: 10px;
 }
 main #shopping_guide div .delivery_img {
   width: 250px;
 }
-@media (min-width: 640px) {
-  main #shopping_guide div .delivery_img {
-    width: auto;
-  }
-}
 main #shopping_guide div .payment_img {
   width: 500px;
-}
-@media (min-width: 640px) {
-  main #shopping_guide .delivery {
-    margin: 0 1% 0 0;
-  }
 }
 main #shopping_guide .sp_title {
   width: 220px;
@@ -229,6 +228,33 @@ main #shopping_guide span {
   display: inline-block;
   color: #333;
 }
+@media (min-width: 640px) {
+  main #shopping_guide h3 {
+    font-size: 18px;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  main #shopping_guide div {
+    height: 260px;
+    width: 49.5%;
+    float: left;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 15px;
+  }
+  main #shopping_guide .delivery {
+    margin: 0 1% 0 0;
+  }
+  main #shopping_guide .delivery .delivery_img {
+    width: auto;
+  }
+  main #shopping_guide p {
+    margin: 10px 0 5px;
+  }
+  main #shopping_guide .delivery_img, main #shopping_guide .payment_img {
+    margin-top: 5px;
+  }
+}
 main #side_bar {
   margin: 1%;
 }
@@ -239,7 +265,7 @@ main #side_bar .next_img {
 }
 @media (min-width: 640px) {
   main #side_bar .next_img {
-    width: 26px;
+    padding-top: 4px;
   }
 }
 main #side_bar .down_img {
@@ -249,7 +275,7 @@ main #side_bar .down_img {
 }
 @media (min-width: 640px) {
   main #side_bar .down_img {
-    width: 31px;
+    margin: 5px 3px 0 0;
   }
 }
 main #side_bar #search {
@@ -296,8 +322,11 @@ main #side_bar h4 {
 @media (min-width: 640px) {
   main #side_bar h4 {
     margin-top: 10px;
-    padding-top: 6px;
+    padding-top: 5px;
     padding-bottom: 0;
+  }
+  main #side_bar h4 .next_img {
+    margin: 7px 5px 0 0;
   }
 }
 @media (max-width: 639px) {
@@ -472,6 +501,12 @@ footer .container small {
   margin-bottom: 10px;
 }
 
+@media (min-width: 640px) {
+  .sp_cate {
+    display: none;
+  }
+}
+
 .pc_cate {
   display: none;
 }
@@ -487,6 +522,16 @@ footer .container small {
 
 #item_area p {
   padding-top: 5px;
+}
+
+.owl-prev {
+  float: left;
+  margin: 0;
+}
+
+.owl-next {
+  float: right;
+  margin: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

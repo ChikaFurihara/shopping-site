@@ -12,7 +12,6 @@
   -webkit-tap-highlight-color: transparent; }
   .owl-theme .owl-nav [class*='owl-'] {
     color: #FFF;
-    margin: 5px;
     padding: 15px 50px;
     background: #887f69;
     display: inline-block;
@@ -20,8 +19,6 @@
     font-weight: bold;
     letter-spacing: 1px;
    }
-   .owl-prev {float: left}
-   .owl-next {float: right}
     .owl-theme .owl-nav [class*='owl-']:hover {
       background: #869791;
       color: #FFF;

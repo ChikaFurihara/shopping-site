@@ -11,7 +11,6 @@ html {
   font-size: 62.5%;
   color: #333;
 }
-
 @mixin fontsize($size: 24, $base: 10) {
   font-size: $size + px;
   font-size: ($size / $base) * 1rem;
@@ -64,10 +63,17 @@ header{
   .container {
     h1 {
       margin-top: 10px;
-      #logo {
         img {
           width: 110px;
         }
+      @media (min-width: 640px){
+        height: 50px;
+        margin-top: 30px;
+        margin-left: 5px;
+        margin-bottom: 0;
+          img {
+            width: 150px;
+          }
       }
     }
     .navi {
@@ -110,6 +116,7 @@ header{
       height: 50px;
       margin-top: 30px;
       margin-left: 5px;
+      margin-bottom: 0;
       img {
         width: 150px;
       }
@@ -183,8 +190,10 @@ main {
           line-height: 20px;
         }
       }
-      li:nth-child(odd){
-        margin-right: 1%;
+      @media (max-width: 639px){
+        li:nth-child(odd){
+          margin-right: 1%;
+        }
       }
       .price {
         letter-spacing: .5px;
@@ -192,8 +201,11 @@ main {
       }
       @media (min-width: 640px){
         li {
-        width: 33%;
-        margin: 0 .3% .3% 0;
+          width: 32.9%;
+          margin: 0 .6% .6% 0;
+        }
+        li:nth-child(3n) {
+          margin-right: 0;
         }
       }
     }
@@ -214,26 +226,12 @@ main {
     div {
       background-color: #fff;
       padding: 25px 6% 10px;
-      @media (min-width: 640px){
-        height: 270px;
-        width: 49.5%;
-        float: left;
-        box-sizing: border-box;
-        margin: 0;
-      }
+      margin-top: 10px;
       .delivery_img {
         width: 250px;
-        @media (min-width: 640px){
-          width: auto;
-        }
       }
       .payment_img {
         width: 500px;
-      }
-    }
-    .delivery {
-      @media (min-width: 640px){
-        margin: 0 1% 0 0;
       }
     }
     .sp_title {
@@ -248,24 +246,50 @@ main {
       display: inline-block;
       color: #333;
     }
+    @media (min-width: 640px){
+      h3 {
+        @include fontsize(18);
+        margin-bottom: 10px;
+      }
+      div {
+        height: 260px;
+        width: 49.5%;
+        float: left;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 15px;
+      }
+      .delivery {
+        margin: 0 1% 0 0;
+        .delivery_img {
+          width: auto;
+        }
+      }
+      p {
+        margin: 10px 0 5px;
+      }
+      .delivery_img ,.payment_img {
+        margin-top: 5px;
+      }
+    }
   }
   #side_bar {
     margin: 1%;
     .next_img {
       float: right;
       width: 29px;
-      @media (min-width: 640px){
-        width: 26px;
-      }
       padding: 7px 10px 0;
+      @media (min-width: 640px){
+        padding-top: 4px;
+      }
     }
     .down_img {
       float: right;
       width: 35px;
-      @media (min-width: 640px){
-        width: 31px;
-      }
       padding: 10px;
+      @media (min-width: 640px){
+        margin: 5px 3px 0 0;
+      }
     }
     #search{
       background-color: #fff;
@@ -306,8 +330,11 @@ main {
       padding: 10px 2% 10px 5%;
       @media (min-width: 640px){
         margin-top: 10px;
-        padding-top: 6px;
+        padding-top: 5px;
         padding-bottom: 0;
+        .next_img {
+          margin: 7px 5px 0 0;
+        }
       }
     }
     @media (max-width: 639px){
@@ -472,13 +499,18 @@ footer {
 .cate_image{
   margin-bottom: 10px;
 }
-
+.sp_cate {
+  @media (min-width: 640px){
+    display: none;
+  }
+}
 .pc_cate {
   display: none;
   @media (min-width: 640px){
     display: block;
   }
 }
+
 
 #item_area, #recent_pro {
   @extend #new_items;
@@ -490,4 +522,12 @@ footer {
   p {
     padding-top: 5px;
   }
+}
+.owl-prev {
+  float: left;
+  margin: 0;
+}
+.owl-next {
+  float: right;
+  margin: 0;
 }
