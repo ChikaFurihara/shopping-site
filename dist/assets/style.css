@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   font-size: 62.5%;
   color: #333;
@@ -16,7 +17,7 @@ body {
 p {
   font-size: 16px;
   font-size: 1.6rem;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 @media (min-width: 640px) {
   p {
@@ -47,6 +48,12 @@ h1, h2 {
   padding: 0;
 }
 
+header .container h1 {
+  margin-top: 10px;
+}
+header .container h1 #logo img {
+  width: 110px;
+}
 header .container .navi {
   text-align: center;
   margin-bottom: 10px;
@@ -142,26 +149,29 @@ main .pc_title {
     margin: 20px 0;
   }
 }
-main #new_items .sp_title, main #popular_items .sp_title {
+main #new_items .sp_title, main #popular_items .sp_title, main #item_area .sp_title, main #recent_pro .sp_title {
   width: 120px;
 }
-main #new_items ul li, main #popular_items ul li {
-  width: 49%;
-  margin: 0.5%;
-  padding: 2%;
-  display: inline-block;
+main #new_items ul li, main #popular_items ul li, main #item_area ul li, main #recent_pro ul li {
+  width: 49.5%;
   float: left;
-  background-color: #fff;
   box-sizing: border-box;
+  margin-bottom: 1%;
+  background-color: #fff;
+  padding: 10px;
 }
-main #new_items ul li .price, main #popular_items ul li .price {
+main #new_items ul li p, main #popular_items ul li p, main #item_area ul li p, main #recent_pro ul li p {
+  line-height: 20px;
+}
+main #new_items ul li:nth-child(odd), main #popular_items ul li:nth-child(odd), main #item_area ul li:nth-child(odd), main #recent_pro ul li:nth-child(odd) {
+  margin-right: 1%;
+}
+main #new_items ul .price, main #popular_items ul .price, main #item_area ul .price, main #recent_pro ul .price {
   letter-spacing: .5px;
+  margin: 15px 0 10px;
 }
 @media (min-width: 640px) {
-  main #new_items ul, main #popular_items ul {
-    width: 100.5%;
-  }
-  main #new_items ul li, main #popular_items ul li {
+  main #new_items ul li, main #popular_items ul li, main #item_area ul li, main #recent_pro ul li {
     width: 33%;
     margin: 0 .3% .3% 0;
   }
@@ -176,15 +186,11 @@ main #shopping_guide h3 {
   font-size: 22px;
   font-size: 2.2rem;
   font-weight: 600;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 main #shopping_guide div {
   background-color: #fff;
-  margin: 1% 1% 0;
-  padding-top: 20px;
-  padding-left: 5%;
-  padding-bottom: 10px;
-  padding-right: 5%;
+  padding: 25px 6% 10px;
 }
 @media (min-width: 640px) {
   main #shopping_guide div {
@@ -216,7 +222,7 @@ main #shopping_guide .sp_title {
 }
 main #shopping_guide p {
   margin-top: 15px;
-  margin-bottom: 0;
+  margin-bottom: 10px;
   font-weight: 600;
 }
 main #shopping_guide span {
@@ -320,8 +326,8 @@ main #categories P {
   margin-bottom: 2px;
   padding: 10px;
   padding-left: 5%;
-  font-size: 12px;
-  font-size: 1.2rem;
+  font-size: 14px;
+  font-size: 1.4rem;
 }
 main aside .store_box {
   box-sizing: border-box;
@@ -415,7 +421,72 @@ footer .container small {
   color: #ccc;
   display: inherit;
   text-align: center;
-  letter-spacing: .5px;
+  letter-spacing: 1px;
+}
+
+.breadcrumb {
+  padding: 8px;
+  background-color: #e2ddd4;
+  border-radius: 3px;
+}
+
+.breadcrumb li {
+  display: inline;
+  /*横に並ぶように*/
+  list-style: none;
+}
+
+.breadcrumb li:after {
+  /* /を表示*/
+  content: '/';
+  padding: 0 3px;
+  color: #ccc;
+}
+
+.breadcrumb li:last-child:after {
+  content: '';
+}
+
+.breadcrumb li a {
+  text-decoration: none;
+  color: #887f69;
+}
+.breadcrumb li a span {
+  font-size: 13px;
+  font-size: 1.3rem;
+}
+
+.home_icon {
+  background: url("../images/list/home_icon.png") no-repeat 5px 1px;
+  background-size: 15px;
+}
+.home_icon span {
+  padding-left: 30px;
+}
+
+.breadcrumb li a:hover {
+  text-decoration: underline;
+}
+
+.cate_image {
+  margin-bottom: 10px;
+}
+
+.pc_cate {
+  display: none;
+}
+@media (min-width: 640px) {
+  .pc_cate {
+    display: block;
+  }
+}
+
+#recent_pro_title {
+  margin: 20px 0 15px;
+}
+
+#item_area p {
+  padding-top: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -35,7 +35,7 @@ p {
     @include fontsize(12);
     letter-spacing: .5px;
   }
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 li{
@@ -62,6 +62,14 @@ h1,h2 {
 
 header{
   .container {
+    h1 {
+      margin-top: 10px;
+      #logo {
+        img {
+          width: 110px;
+        }
+      }
+    }
     .navi {
       text-align: center;
       margin-bottom: 10px;
@@ -165,19 +173,24 @@ main {
     }
     ul {
       li {
-        width: 49%;
-        margin: 0.5%;
-        padding: 2%;
-        display: inline-block;
+        width: 49.5%;
         float: left;
-        background-color: #fff;
         box-sizing: border-box;
-        .price {
-          letter-spacing: .5px;
+        margin-bottom: 1%;
+        background-color: #fff;
+        padding: 10px;
+        p {
+          line-height: 20px;
         }
       }
+      li:nth-child(odd){
+        margin-right: 1%;
+      }
+      .price {
+        letter-spacing: .5px;
+        margin: 15px 0 10px;
+      }
       @media (min-width: 640px){
-        width: 100.5%;
         li {
         width: 33%;
         margin: 0 .3% .3% 0;
@@ -196,15 +209,11 @@ main {
     h3 {
       @include fontsize(22);
       font-weight: 600;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
     }
     div {
       background-color: #fff;
-      margin: 1% 1% 0;
-      padding-top: 20px;
-      padding-left: 5%;
-      padding-bottom: 10px;
-      padding-right: 5%;
+      padding: 25px 6% 10px;
       @media (min-width: 640px){
         height: 270px;
         width: 49.5%;
@@ -232,7 +241,7 @@ main {
     }
     p {
       margin-top: 15px;
-      margin-bottom: 0;
+      margin-bottom: 10px;
       font-weight: 600;
     }
     span{
@@ -329,7 +338,7 @@ main {
       margin-bottom: 2px;
       padding: 10px;
       padding-left: 5%;
-      @include fontsize(12);
+      @include fontsize(14);
     }
   }
   aside {
@@ -411,8 +420,74 @@ footer {
       color: #ccc;
       display: inherit;
       text-align: center;
-      letter-spacing: .5px;
+      letter-spacing: 1px;
     }
   }
 }
+          
+// category.html================================
+// パンくずリスト============
+.breadcrumb {
+  padding: 8px;
+  background-color: $gray1;
+  border-radius: 3px;
+}
 
+.breadcrumb li{
+  display: inline;/*横に並ぶように*/
+  list-style: none;
+}
+
+.breadcrumb li:after{/* /を表示*/
+  content: '/';
+  padding: 0 3px;
+  color: #ccc;
+}
+
+.breadcrumb li:last-child:after{
+  content: '';
+}
+
+.breadcrumb li a {
+  text-decoration: none;
+  color: $keyColor;
+  span {
+    @include fontsize(13)
+  }
+}
+
+.home_icon {
+  background: url("../images/list/home_icon.png") no-repeat 5px 1px;
+  background-size: 15px;
+  span {
+    padding-left: 30px;
+  }
+}
+
+.breadcrumb li a:hover {
+    text-decoration: underline;
+}
+
+// ============
+.cate_image{
+  margin-bottom: 10px;
+}
+
+.pc_cate {
+  display: none;
+  @media (min-width: 640px){
+    display: block;
+  }
+}
+
+#item_area, #recent_pro {
+  @extend #new_items;
+}
+#recent_pro_title {
+  margin: 20px 0 15px;
+}
+#item_area {
+  p {
+    padding-top: 5px;
+  }
+}

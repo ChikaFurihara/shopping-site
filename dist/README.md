@@ -78,7 +78,7 @@ Call the [plugin](https://learn.jquery.com/plugins/) function and your carousel 
 
 ```javascript
 $(document).ready(function(){
-  $('.owl-carousel').owlCarousel();
+  $('.owl-carousel').owlCarousel1();
 });
 ```
 
