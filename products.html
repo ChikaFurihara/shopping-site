@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>商品一覧 | Apple Berry</title>
+    <title>商品詳細 | Apple Berry</title>
     <link rel="stylesheet" href="dist/assets/normalize.css">
     <link rel="stylesheet" href="dist/assets/skeleton.css">
     <link rel="stylesheet" href="dist/assets/owl.carousel.min.css">
@@ -54,11 +54,11 @@
     </header>
     <!--top=================================-->
     <main>
-      <div class="container">
+      <div>
         <div class="row">
           <div class="nine columns">
           <!--パンくずリスト=================================-->
-            <ul class="breadcrumb">
+            <ul class="breadcrumb product_breadcrumb">
               <li>
                 <a href="" class="home_icon">
                   <span>HOME</span>
@@ -69,110 +69,86 @@
                   <span>カテゴリー名</span>
                 </a>
               </li>
+              <li>
+                <a href="" itemprop="url">
+                  <span>商品名</span>
+                </a>
+              </li>
             </ul>
-            <div class="cate_image">
-              <img class="sp_cate u-max-full-width" src="dist/images/list/cate_image_sp.jpg" alt="">
-              <img class="pc_cate u-max-full-width" src="dist/images/list/cate_image.jpg" alt="">
+            <div id="details_area">
+              <div class="details_first">
+                <p class="product_name">商品名が入ります</p>
+                <p class="product_no">fa0001-91</p>
+                <a href="#"><img class="u-full-width" src="dist/images/products/pro_img_01.jpg" alt=""></a>
+              </div>
+              <ul class="details_li u-cf">
+                <li>
+                  <a href=""><img src="dist/images/products/pro_img_01.jpg"></a>
+                </li>
+                <li>
+                  <a href=""><img src="dist/images/products/pro_img_02.jpg"></a>
+                </li>
+                <li>
+                  <a href=""><img src="dist/images/products/pro_img_03.jpg"></a>
+                </li>
+                <li>
+                  <a href=""><img src="dist/images/products/pro_img_04.jpg"></a>
+                </li>
+                <li>
+                  <a href=""><img src="dist/images/products/pro_img_05.jpg"></a>
+                </li>
+                <li>
+                  <a href=""><img src="dist/images/products/gray_pro_img.jpg"></a>
+                </li>
+                <li>
+                  <a href=""><img src="dist/images/products/gray_pro_img.jpg"></a>
+                </li>
+                <li>
+                  <a href=""><img src="dist/images/products/gray_pro_img.jpg"></a>
+                </li>
+                <li>
+                  <a href=""><img src="dist/images/products/gray_pro_img.jpg"></a>
+                </li>
+                <li>
+                  <a href=""><img src="dist/images/products/gray_pro_img.jpg"></a>
+                </li>
+              </ul>
+              <section class="products_color">
+                <h5>COLOR / SIZE</h5>
+                <table>
+                  <tr>
+                    <th></th><th>カラー１</th><th>カラー１</th>
+                  </tr>
+                  <tr>
+                    <th>サイズ</th><td>□</td><td>□</td>
+                  </tr>
+                </table>
+              </section>
+              <section class="products_price">
+                <h5>PRICE</h5>
+                <p><a>¥<span>1,000</span></a>(tax in)</p>
+              </section>
+              <section class="quantity">
+                <h5>Quantity</h5>
+                <input type="text" name="subject" placeholder="" class="quantity_input"></input>
+              </section>
+              <a href="" class="cart_btn"><img src="dist/images/products/add_to_cart.png"></a>
+              <section class="description">
+                <h5>商品説明</h5>
+                <p>■説明タイトル説明タイトル説明タイトル説明タイトル</p>
+                <a>説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト説明テキスト</a>
+                <table>
+                  <tr>
+                    <th>カラー</th><td>説明文が入ります説明文がはいります</td>
+                  </tr>
+                  <tr>
+                    <th>サイズ</th><td>説明文が入ります説明文がはいります</td>
+                  </tr>
+                </table>              
+              </section>
+              
             </div>
-            <div id="item_area">
-              <div class="owl-carousel owl-theme">
-                <ul class="li_1 u-cf">
-                  <li>
-                    <a href="#"><img class="u-full-width" src="dist/images/top/item_01.jpg" alt=""></a>
-                    <p>商品名が入ります商品名が入ります商品名が入ります</p>
-                    <p class="price">¥10,000 (tax in)</p>
-                  </li>
-                  <li>
-                    <a href="#"><img class="u-full-width" src="dist/images/top/item_02.jpg" alt=""></a>
-                    <p>商品名が入ります商品名が入ります商品名が入ります</p>
-                    <p class="price">¥10,000 (tax in)</p>
-                  </li>
-                  <li>
-                    <a href="#"><img class="u-full-width" src="dist/images/top/item_03.jpg" alt=""></a>
-                    <p>商品名が入ります商品名が入ります商品名が入ります</p>
-                    <p class="price">¥10,000 (tax in)</p>
-                  </li>
-                  <li>
-                    <a href="#"><img class="u-full-width" src="dist/images/top/item_04.jpg" alt=""></a>
-                    <p>商品名が入ります商品名が入ります商品名が入ります</p>
-                    <p class="price">¥10,000 (tax in)</p>
-                  </li>
-                  <li>
-                    <a href="#"><img class="u-full-width" src="dist/images/top/item_05.jpg" alt=""></a>
-                    <p>商品名が入ります商品名が入ります商品名が入ります</p>
-                    <p class="price">¥10,000 (tax in)</p>
-                  </li>
-                  <li>
-                    <a href="#"><img class="u-full-width" src="dist/images/top/item_06.jpg" alt=""></a>
-                    <p>商品名が入ります商品名が入ります商品名が入ります</p>
-                    <p class="price">¥10,000 (tax in)</p>
-                  </li>
-                  <li>
-                    <a href="#"><img class="u-full-width" src="dist/images/top/item_01.jpg" alt=""></a>
-                    <p>商品名が入ります商品名が入ります商品名が入ります</p>
-                    <p class="price">¥10,000 (tax in)</p>
-                  </li>
-                  <li>
-                    <a href="#"><img class="u-full-width" src="dist/images/top/item_02.jpg" alt=""></a>
-                    <p>商品名が入ります商品名が入ります商品名が入ります</p>
-                    <p class="price">¥10,000 (tax in)</p>
-                  </li>
-                  <li>
-                    <a href="#"><img class="u-full-width" src="dist/images/top/item_03.jpg" alt=""></a>
-                    <p>商品名が入ります商品名が入ります商品名が入ります</p>
-                    <p class="price">¥10,000 (tax in)</p>
-                  </li>
-                </ul>
-                <ul class="li_2">
-                  <li>
-                    <a href="#"><img class="u-full-width" src="dist/images/top/item_03.jpg" alt=""></a>
-                    <p>商品名が入ります商品名が入ります商品名が入ります</p>
-                    <p class="price">¥10,000 (tax in)</p>
-                  </li>
-                  <li>
-                    <a href="#"><img class="u-full-width" src="dist/images/top/item_01.jpg" alt=""></a>
-                    <p>商品名が入ります商品名が入ります商品名が入ります</p>
-                    <p class="price">¥10,000 (tax in)</p>
-                  </li>
-                  <li>
-                    <a href="#"><img class="u-full-width" src="dist/images/top/item_02.jpg" alt=""></a>
-                    <p>商品名が入ります商品名が入ります商品名が入ります</p>
-                    <p class="price">¥10,000 (tax in)</p>
-                  </li>
-                  <li>
-                    <a href="#"><img class="u-full-width" src="dist/images/top/item_03.jpg" alt=""></a>
-                    <p>商品名が入ります商品名が入ります商品名が入ります</p>
-                    <p class="price">¥10,000 (tax in)</p>
-                  </li>
-                  <li>
-                    <a href="#"><img class="u-full-width" src="dist/images/top/item_04.jpg" alt=""></a>
-                    <p>商品名が入ります商品名が入ります商品名が入ります</p>
-                    <p class="price">¥10,000 (tax in)</p>
-                  </li>
-                  <li>
-                    <a href="#"><img class="u-full-width" src="dist/images/top/item_05.jpg" alt=""></a>
-                    <p>商品名が入ります商品名が入ります商品名が入ります</p>
-                    <p class="price">¥10,000 (tax in)</p>
-                  </li>
-                  <li>
-                    <a href="#"><img class="u-full-width" src="dist/images/top/item_06.jpg" alt=""></a>
-                    <p>商品名が入ります商品名が入ります商品名が入ります</p>
-                    <p class="price">¥10,000 (tax in)</p>
-                  </li>
-                  <li>
-                    <a href="#"><img class="u-full-width" src="dist/images/top/item_01.jpg" alt=""></a>
-                    <p>商品名が入ります商品名が入ります商品名が入ります</p>
-                    <p class="price">¥10,000 (tax in)</p>
-                  </li>
-                  <li>
-                    <a href="#"><img class="u-full-width" src="dist/images/top/item_02.jpg" alt=""></a>
-                    <p>商品名が入ります商品名が入ります商品名が入ります</p>
-                    <p class="price">¥10,000 (tax in)</p>
-                  </li>
-                </ul>
-              </div>
-              </div>
-            <section id="recent_pro" class="u-cf">
+            <section id="recent_pro" class="container u-cf ">
               <div>
                 <h2 id="recent_pro_title"><img class="sp_title u-full-width" src="dist/images/list/title_recent_pro.png" alt="最近見た商品" srcset="dist/images/list/title_recent_pro@2x.png 2x">
                 <img class="pc_title u-full-width" src="dist/images/list/recent_pro_pc.png" alt="最近見た商品"></h2>

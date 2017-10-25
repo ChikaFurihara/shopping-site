@@ -531,3 +531,151 @@ footer {
   float: right;
   margin: 0;
 }
+
+// products.html================================
+// パンくずリスト============
+.product_breadcrumb {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#details_area {
+  @extend #new_items;
+  background-color: #fff;
+  margin-top: 20px;
+  padding: 10px;
+  .product_name {
+    @include fontsize(20);
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 10px 0 5px;
+  }
+  .product_no {
+    color: #ccc;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(208, 212, 153, .7);
+  }
+  .details_first {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .details_li {
+    border-bottom: 1px solid rgba(208, 212, 153, .7);
+    padding-bottom: 10px;
+    li {
+      width: 19%;
+      margin: .5% 1.25% 0 0;
+      padding: 0;
+      img {
+        width: 100%;
+      }
+    }
+    @media (max-width: 639px){
+      li:nth-child(odd){
+        margin-right: 1.25%;
+      }
+      li:nth-child(5n) {
+        margin-right: 0;
+      }
+    }
+  }
+  section {
+    border-bottom: 1px solid rgba(208, 212, 153, .7);
+  }
+  h5 {
+    color: $keyColor;
+    font-family: 'arial black';
+    letter-spacing: .5px;
+    font-weight: 900;
+    margin-top: 20px;
+  }
+  table {
+    width: 100%;
+    th,td {
+      font-weight: normal;
+      border-color: rgba(208, 212, 153, .7);
+      color: $keyColor;
+    }
+    th {
+      background-color: rgba(208, 212, 153, .1);
+      padding: 20px;
+      text-align: center;
+    }
+  }
+  .products_color  {
+    th {
+      padding: 15px 0;
+    }
+    td {
+      color: rgba(208, 212, 153, .7);
+      @include fontsize(28);
+      padding: 0;
+      text-align: center;
+    }
+  }
+  .products_price {
+    line-height: 72px;
+    h5 {
+      display: inline-block;
+      width: 20%;
+    }
+    p {
+      display: inline-block;
+      width: 80%;
+      float: right;
+      text-align: center;
+      margin-bottom: 0;
+      a {
+        color: red;
+        span {
+          @include fontsize(30);
+        }
+      }
+    }
+  }
+  .quantity {
+    line-height: 72px;
+    h5 {
+      display: inline-block;
+      margin-right: 15%;
+    }
+    .quantity_input {
+      border-radius: 0;
+      border-color: rgba(208, 212, 153, .7);
+      margin-bottom: 0;
+      padding: 20px 5px;
+      width: 46%;
+    }
+  }
+  .cart_btn {
+    img {
+      display: block;
+      width: 75%;
+      margin: 20px auto;
+    }
+  }
+  .description {
+    border-bottom: none;
+    h5 {
+      border-bottom: 1px solid $keyColor;
+      padding: 10px 0;
+    }
+    p {
+      color: $keyColor;
+      @include fontsize(22);
+      font-weight: 900;
+      letter-spacing: 1.5px;
+    }
+    table {
+      margin: 25px 0;
+    }
+    th {
+      width: 26%;
+    }
+    td {
+      padding-right: 15px;
+      letter-spacing: 1px;
+      @include fontsize(16);
+    }
+  }
+}
