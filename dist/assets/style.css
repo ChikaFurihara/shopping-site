@@ -516,6 +516,12 @@ footer .container small {
   }
 }
 
+@media (min-width: 640px) {
+  #recent_pro {
+    width: 100%;
+  }
+}
+
 #recent_pro_title {
   margin: 20px 0 15px;
 }
@@ -538,11 +544,21 @@ footer .container small {
   width: 90%;
   margin: 0 auto;
 }
+@media (min-width: 640px) {
+  .product_breadcrumb {
+    width: 98%;
+  }
+}
 
 #details_area {
   background-color: #fff;
   margin-top: 20px;
   padding: 10px;
+}
+@media (min-width: 640px) {
+  #details_area {
+    padding: 50px;
+  }
 }
 #details_area .product_name {
   font-size: 20px;
@@ -554,20 +570,52 @@ footer .container small {
 #details_area .product_no {
   color: #ccc;
   padding-bottom: 20px;
-  border-bottom: 1px solid rgba(208, 212, 153, 0.7);
+}
+@media (min-width: 640px) {
+  #details_area .product_no {
+    padding-bottom: 0;
+    float: right;
+  }
 }
 #details_area .details_first {
   width: 100%;
   margin-bottom: 10px;
+  border-bottom: 1px solid rgba(208, 212, 153, 0.7);
+}
+@media (min-width: 640px) {
+  #details_area .details_first {
+    line-height: 15px;
+    padding-bottom: 15px;
+  }
+}
+@media (min-width: 640px) {
+  #details_area .pro_main {
+    width: 71%;
+    display: inline-block;
+    margin-bottom: 20px;
+  }
 }
 #details_area .details_li {
-  border-bottom: 1px solid rgba(208, 212, 153, 0.7);
   padding-bottom: 10px;
+}
+@media (min-width: 640px) {
+  #details_area .details_li {
+    width: 28%;
+    float: right;
+    margin-left: 1%;
+    padding-bottom: 0;
+  }
 }
 #details_area .details_li li {
   width: 19%;
   margin: .5% 1.25% 0 0;
   padding: 0;
+}
+@media (min-width: 640px) {
+  #details_area .details_li li {
+    width: 48%;
+    margin-bottom: 1.5px;
+  }
 }
 #details_area .details_li li img {
   width: 100%;
@@ -580,8 +628,16 @@ footer .container small {
     margin-right: 0;
   }
 }
+@media (min-width: 640px) {
+  #details_area .details_li li:nth-child(odd) {
+    margin-right: 2.5%;
+  }
+  #details_area .details_li li:nth-child(9n), #details_area .details_li li:nth-child(10n) {
+    margin-bottom: 0;
+  }
+}
 #details_area section {
-  border-bottom: 1px solid rgba(208, 212, 153, 0.7);
+  border-top: 1px solid rgba(208, 212, 153, 0.7);
 }
 #details_area h5 {
   color: #887f69;
@@ -589,6 +645,12 @@ footer .container small {
   letter-spacing: .5px;
   font-weight: 900;
   margin-top: 20px;
+}
+@media (min-width: 640px) {
+  #details_area h5 {
+    font-size: 18px;
+    font-size: 1.8rem;
+  }
 }
 #details_area table {
   width: 100%;
@@ -636,6 +698,7 @@ footer .container small {
 }
 #details_area .quantity {
   line-height: 72px;
+  border-bottom: 1px solid rgba(208, 212, 153, 0.7);
 }
 #details_area .quantity h5 {
   display: inline-block;
@@ -648,13 +711,22 @@ footer .container small {
   padding: 20px 5px;
   width: 46%;
 }
-#details_area .cart_btn img {
+#details_area .cart_btn {
   display: block;
   width: 75%;
   margin: 20px auto;
 }
+@media (min-width: 640px) {
+  #details_area .cart_btn {
+    margin: 0;
+    width: 100%;
+  }
+}
+#details_area .cart_btn img {
+  width: 100%;
+}
 #details_area .description {
-  border-bottom: none;
+  border: none;
 }
 #details_area .description h5 {
   border-bottom: 1px solid #887f69;
@@ -667,17 +739,58 @@ footer .container small {
   font-weight: 900;
   letter-spacing: 1.5px;
 }
+@media (min-width: 640px) {
+  #details_area .description p {
+    font-size: 18px;
+    font-size: 1.8rem;
+  }
+}
+@media (min-width: 640px) {
+  #details_area .description a {
+    font-size: 16px;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+  }
+}
 #details_area .description table {
   margin: 25px 0;
 }
 #details_area .description th {
   width: 26%;
 }
+@media (min-width: 640px) {
+  #details_area .description th {
+    padding: 10px;
+  }
+}
 #details_area .description td {
   padding-right: 15px;
   letter-spacing: 1px;
   font-size: 16px;
   font-size: 1.6rem;
+}
+@media (min-width: 640px) {
+  #details_area .description td {
+    font-size: 12px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 640px) {
+  .w_100 {
+    width: 100%;
+  }
+
+  .pc_left {
+    width: 55%;
+    float: left;
+  }
+
+  .pc_right {
+    width: 40%;
+    padding-left: 5%;
+    float: right;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
