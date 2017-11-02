@@ -43,11 +43,6 @@ h1, h2 {
   margin: 5px 0;
 }
 
-.container {
-  width: 95%;
-  padding: 0;
-}
-
 header .container h1 {
   margin-top: 10px;
 }
@@ -57,9 +52,10 @@ header .container h1 img {
 @media (min-width: 640px) {
   header .container h1 {
     height: 50px;
-    margin-top: 30px;
+    /*margin-top: 30px;*/
     margin-left: 5px;
     margin-bottom: 0;
+    line-height: 100px;
   }
   header .container h1 img {
     width: 150px;
@@ -89,7 +85,7 @@ header .sp_navi_li {
   right: 0;
   border: 1px solid #eee;
   background: white;
-  margin: 0;
+  margin: 28px 0 0;
   padding: 0;
   display: none;
   z-index: 100;
@@ -98,6 +94,9 @@ header .sp_navi_li a {
   display: block;
   padding: 5px 8px;
   border-bottom: 1px solid #eee;
+}
+header .sp_navi_li li:nth-child {
+  border-bottom: none;
 }
 @media (min-width: 640px) {
   header h1 {
@@ -513,6 +512,7 @@ footer .container small {
 @media (min-width: 640px) {
   .pc_cate {
     display: block;
+    width: 100%;
   }
 }
 
@@ -777,10 +777,6 @@ footer .container small {
 }
 
 @media (min-width: 640px) {
-  .w_100 {
-    width: 100%;
-  }
-
   .pc_left {
     width: 55%;
     float: left;
